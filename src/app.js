@@ -2,6 +2,29 @@ import $ from 'jquery';
 import _ from 'underscore';
 import ApplicationView from 'app/views/application_view';
 
+var quoteData = [
+  {
+    symbol: 'HUMOR',
+    price: 88
+  },
+  {
+    symbol: 'CLOTH',
+    price: 81
+  },
+  {
+    symbol: 'HABIT',
+    price: 98
+  },
+  {
+    symbol: 'SUPER',
+    price: 83
+  },
+  {
+    symbol: 'MXTPE',
+    price: 109
+  }
+];
+
 const simulate = function(quote) {
   // Calculate a random price movement
   const maxChange = 1.00;
@@ -19,7 +42,8 @@ const simulate = function(quote) {
 
 $(document).ready(function() {
   var appView = new ApplicationView({
-    el: '#application'
+    el: '#application',
+    quoteData: quoteData
   });
 
   appView.render();
