@@ -22,6 +22,10 @@ var quoteData = [
   {
     symbol: 'MXTPE',
     price: 109
+  },
+  {
+    symbol: 'FUZZY',
+    price: 100
   }
 ];
 
