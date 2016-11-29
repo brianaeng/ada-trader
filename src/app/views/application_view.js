@@ -23,8 +23,6 @@ const ApplicationView = Backbone.View.extend({
       this.listElement.append(singleQuote.$el);
     }, this);
 
-    // this.$el.html('<p>Hello World</p>');
-
     return this;
   }
 });

@@ -13,6 +13,22 @@ var QuoteView = Backbone.View.extend({
     this.$el.html(html);
 
     return this;
+  },
+  events: {
+    'click .btn-sell': 'decreasePrice',
+    'click .btn-buy': 'increasePrice'
+  },
+  decreasePrice: function(e){
+    e.preventDefault();
+    console.log("decrese price by 1");
+    this.quote.price -= 1;
+    this.render();
+  },
+  increasePrice: function(e){
+    e.preventDefault();
+    console.log("increase price by 1");
+    this.quote.price += 1;
+    this.render();
   }
 });
 
